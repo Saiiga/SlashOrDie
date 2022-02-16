@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
-    Collider2D hitbox ;
-    Rigibody rigibody ;
-    Sprite sprite ;
-    Animator animator ;
+    protected Collider2D hitbox ;
+    [SerializeField] protected Rigidbody2D rigibody ;
+    protected Sprite sprite ;
+    protected Animator animator ;
 
     public abstract void OnDie();
     public abstract void OnHit();
