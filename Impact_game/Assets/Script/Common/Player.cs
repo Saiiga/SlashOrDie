@@ -1,13 +1,19 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : Entity
 {
-    
-   
+    public override void OnDie()
+    {
+        throw new System.NotImplementedException();
+    }
 
-
+    public override void OnHit()
+    {
+        throw new System.NotImplementedException();
+    }
 } /*Héritage Entity
 
 attributs:
