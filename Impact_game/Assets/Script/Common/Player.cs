@@ -33,7 +33,7 @@ public class Player : Entity
         animator.Play("Death");
 
     }
-    
+
     public override void OnHit()
     {
         animator.Play("Hit");
@@ -44,12 +44,13 @@ public class Player : Entity
     {
 
     }
-    
+} /*Héritage Entity
+
     public void AddHP(int HP)
     {
         m_HP += HP;
     }
-    
+
     public void RemoveHP(int HP)
     {
         m_HP -= HP;
