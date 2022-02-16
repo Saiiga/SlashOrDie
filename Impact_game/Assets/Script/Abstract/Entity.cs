@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
-    Collider hitbox ;
+    Collider2D hitbox ;
     Rigibody rigibody ;
     Sprite sprite ;
     Animator animator ;
