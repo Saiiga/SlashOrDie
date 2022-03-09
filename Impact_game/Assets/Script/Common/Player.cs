@@ -16,6 +16,7 @@ public class Player : Entity
     public override void OnHit()
     {
         animator.Play("Hit");
+        RemoveHP(1);
     }
     public void TryToRecognizeAttack()
     {
