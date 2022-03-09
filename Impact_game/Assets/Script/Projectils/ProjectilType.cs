@@ -1,4 +1,4 @@
-enum ProjectilType{
+public enum ProjectilType{
     Projectil0,
     Projectil1,
     Projectil2,
