@@ -16,6 +16,8 @@ public class Player : Entity
     public override void OnHit()
     {
         animator.Play("Hit");
+        RemoveHP(1);
+
     }
     public void TryToRecognizeAttack()
     {
@@ -29,5 +31,28 @@ public class Player : Entity
     {
         m_HP -= HP;
     }
-} 
+}
+/*public class NewBehaviourScript : Entity
+{
 
+    public void OnTriggerEnter2D(Collider2D collider)
+    {
+        Player player = collider.GetComponent<Player>();
+
+        if (player != null)
+        {
+            player.OnHit();
+        }
+    }
+
+    public override void OnDie()
+{
+
+}
+
+public override void OnHit()
+{
+
+}
+}
+*/
