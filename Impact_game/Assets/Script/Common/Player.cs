@@ -29,6 +29,10 @@ public class Player : Entity
     public void RemoveHP(int HP)
     {
         m_HP -= HP;
+        if (HP < 1)  
+        {
+            OnDie();
+        }
     }
 } 
 
