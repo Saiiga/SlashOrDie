@@ -5,6 +5,9 @@ using UnityEngine;
 public abstract class Bonus : Entity
 {
 
-    public abstract void Action(Player player);
+    public void Action(Player player)
+    {
+            
+    }
 
 }
