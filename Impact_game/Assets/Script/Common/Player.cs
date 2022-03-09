@@ -5,27 +5,38 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    List<Bonus> m_bonus= new List<Bonus>();
+    public float m_moveSpeed;
+    public int m_HP;
+
     public override void OnDie()
     {
-        throw new System.NotImplementedException();
-    }
+        animator.Play("Death");
 
+    }
     public override void OnHit()
     {
-        throw new System.NotImplementedException();
+        animator.Play("Hit");
     }
-} /*Héritage Entity
+    public void TryToRecognizeAttack()
+    {
 
-attributs:
-Collider hitbox
-Rigibody rigibody
-Sprite sprite
-Animator animator
-List<Bonus> bonus
-float moveSpeed
+    }
+    public void AddBonus(Bonus bonus)
+    {
+        m_bonus.Add(bonus);
+    }
+    public void RemoveBonus(Bonus bonus)
+    {
+        m_bonus.Remove(bonus);
+    }
+    public void AddHP(int HP)
+    {
+        m_HP += HP;
+    }
+    public void RemoveHP(int HP)
+    {
+        m_HP -= HP;
+    }
+} 
 
-fonction:
-Attack TryToRecognizeAttack()
-void AddBonus(Bonus)
-void RemoveBonus(Bonus)
-void OnHit() (ajouter le traitement si touché par projectile et bonus)*/
