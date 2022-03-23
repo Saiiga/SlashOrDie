@@ -8,8 +8,20 @@ public class Bonus : Entity
     [SerializeField] BonusType bonusType;
     public void Action(Player player)
     {
-      
-            
+        switch (bonusType)
+        {
+            case BonusType.SightDown:
+                SightDown(player);
+                break;
+            case BonusType.SightUp:
+                SightUp(player);
+                break;
+            case BonusType.Shild:
+                Shield(player);
+                break ;
+               
+        }
+
     }
 
     public override void OnDie()
