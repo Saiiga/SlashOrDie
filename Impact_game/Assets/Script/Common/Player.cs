@@ -24,12 +24,10 @@ public class Player : Entity
         if (isJumping == true)
         {
             rigibody.AddForce(new Vector2(0f, jumpForce));
-            Debug.Log("jump");
             isJumping = false;
         }
 
     }
-
 
     public override void OnDie()
     {
@@ -55,27 +53,3 @@ public class Player : Entity
         m_HP -= HP;
     }
 }
-/*public class NewBehaviourScript : Entity
-{
-
-    public void OnTriggerEnter2D(Collider2D collider)
-    {
-        Player player = collider.GetComponent<Player>();
-
-        if (player != null)
-        {
-            player.OnHit();
-        }
-    }
-
-    public override void OnDie()
-{
-
-}
-
-public override void OnHit()
-{
-
-}
-}
-*/
