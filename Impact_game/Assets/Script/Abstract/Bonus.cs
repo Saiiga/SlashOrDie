@@ -35,9 +35,15 @@ public class Bonus : Entity
         GetComponent<Camera>().orthographicSize = cameraSize - 0.4f;
     }
 
-    public void Shild(Player player)
+    public void Shield(Player player)
     {
+        int HP = player.m_HP;
+        player.AddHP(1);
 
+        //timer
+
+        if (player.m_HP == HP +1);
+             player.RemoveHP(1);
     }
 
 }
