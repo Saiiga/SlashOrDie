@@ -44,7 +44,6 @@ public class Player : Entity
     {
 
     }
-} /*Héritage Entity
 
     public void AddHP(int HP)
     {
