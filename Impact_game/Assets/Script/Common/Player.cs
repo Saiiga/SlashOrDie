@@ -33,22 +33,29 @@ public class Player : Entity
         animator.Play("Death");
 
     }
+    
     public override void OnHit()
     {
         animator.Play("Hit");
         RemoveHP(1);
-
     }
+    
     public void TryToRecognizeAttack()
     {
 
     }
+    
     public void AddHP(int HP)
     {
         m_HP += HP;
     }
+    
     public void RemoveHP(int HP)
     {
         m_HP -= HP;
+        if (HP < 1)  
+        {
+            OnDie();
+        }
     }
-}
+} 
