@@ -26,7 +26,6 @@ public class Player : Entity
             rigibody.AddForce(new Vector2(0f, jumpForce));
             isJumping = false;
         }
-
     }
 
     public override void OnDie()
