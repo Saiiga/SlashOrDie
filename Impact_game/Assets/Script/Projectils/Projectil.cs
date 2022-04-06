@@ -8,9 +8,12 @@ public class Projectil : Entity
     [SerializeField] private int m_difficulty;
     [SerializeField] private TextMesh textMeshToShow;
     [SerializeField] private int currentIndex = 0;
+    [SerializeField] private float speed = 100;
+    private Vector3 velocity = Vector3.zero;
 
     [SerializeField] public List<ButtonControl> inputsToDo;
     [SerializeField] public ProjectilType projectilType;
+
 
     public void Start()
     {
@@ -29,6 +32,7 @@ public class Projectil : Entity
 
     public void Update()
     {
+        Move();
         if(IsDrestroyable())
         {
             CheckInput();
@@ -86,4 +90,11 @@ public class Projectil : Entity
         textMeshToShow.text = Utils.QwertyToAzerty(inputsToDo[currentIndex].name.ToUpper());
     }
 
+    private void Move()
+    {
+        float horizontalMovement = - speed * Time.deltaTime;
+
+        Vector2 targetVelocity = new Vector2(horizontalMovement, rigibody.velocity.y);
+        rigibody.velocity = Vector3.SmoothDamp(rigibody.velocity, targetVelocity, ref velocity, .05f);
+    }
 }

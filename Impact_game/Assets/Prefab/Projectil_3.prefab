@@ -76,6 +76,7 @@ MonoBehaviour:
   m_difficulty: 3
   textMeshToShow: {fileID: 4962386193823911173}
   currentIndex: 0
+  speed: 100
   projectilType: 0
 --- !u!61 &2023911881027294491
 BoxCollider2D:
