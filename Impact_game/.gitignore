@@ -1,35 +1,4 @@
-adrien_morand
-#8072
 
-Alex Amemoutou | Saiiga — Aujourd’hui à 08:53
-https://gamedev.stackexchange.com/questions/118880/recognize-hand-drawn-shape#118897
-Game Development Stack Exchange
-Recognize hand drawn shape
-I want to ask player to replicate a simple shape (triangle, square, star, anything that can be done in single stroke) with mouse or on a touchscreen.
-
-Orientation matters, size does not.
-Example:
-...
-Image
-C'est le seul truc que j'ai trouvé pour les mouvements tel ça va être étrange à faire
-Alex Amemoutou | Saiiga — Aujourd’hui à 09:23
-https://github.com/Saiiga/YdaysImpact.git
-Alex Amemoutou | Saiiga — Aujourd’hui à 09:55
-https://code.visualstudio.com/docs/other/unity @adrien_morand
-Visual Studio Code and Unity
-Visual Studio Code can replace MonoDevelop as the editor for Unity
-
-Alex Amemoutou | Saiiga — Aujourd’hui à 10:30
-
-# Created by https://www.toptal.com/developers/gitignore/api/unity,visualstudiocode,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=unity,visualstudiocode,visualstudio
-
-### Unity ###
-# This .gitignore file should be placed at the root of your Unity project directory
-Afficher plus
-message.txt
-10 Ko
-﻿
 
 # Created by https://www.toptal.com/developers/gitignore/api/unity,visualstudiocode,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=unity,visualstudiocode,visualstudio
