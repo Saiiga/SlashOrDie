@@ -17,7 +17,7 @@ public class Player : Entity
     public void Update()
     {
             isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (GameController.GetKeyboard().spaceKey.wasPressedThisFrame && isGrounded)
         {
             isJumping = true;
         }
