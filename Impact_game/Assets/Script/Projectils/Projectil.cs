@@ -21,11 +21,14 @@ public class Projectil : Entity
 
         ButtonControl[] availableInput = GameController.GetAuthorizedCodes();
         //Depend of projectil's difficulty, allow to use all possible input or not
-        int maxDifferentInputType = (int)(m_difficulty > 4 ? availableInput.Length - 1 : System.Math.Ceiling(availableInput.Length / 2d));
+        int maxDifferentInputType = (int)(m_difficulty < 4 ? availableInput.Length - 1 : System.Math.Floor(availableInput.Length / 2d));
 
         for(int i=0; i<m_difficulty; i++)
         {
-            inputsToDo.Add(availableInput[Random.Range(0, maxDifferentInputType)]);
+            ButtonControl newKey = availableInput[Random.Range(0, maxDifferentInputType)]; 
+            while(i > 0 && newKey == inputsToDo[i-1])
+                newKey = availableInput[Random.Range(0, maxDifferentInputType)]; 
+            inputsToDo.Add(newKey);
         }
         ChangeInputToShow();
     }
@@ -95,6 +98,6 @@ public class Projectil : Entity
         float horizontalMovement = - speed * Time.deltaTime;
 
         Vector2 targetVelocity = new Vector2(horizontalMovement, rigibody.velocity.y);
-        rigibody.velocity = Vector3.SmoothDamp(rigibody.velocity, targetVelocity, ref velocity, .05f);
+        rigibody.velocity = Vector3.SmoothDamp(rigibody.velocity, targetVelocity, ref velocity, .05f, 1.0f);
     }
 }

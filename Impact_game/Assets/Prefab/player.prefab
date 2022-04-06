@@ -58,7 +58,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &4749331380280039120
 SpriteRenderer:
@@ -123,11 +123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ad598f710cf3746ac7499a85360086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitbox: {fileID: 0}
   rigibody: {fileID: 0}
+  sprite: {fileID: 0}
+  animator: {fileID: 0}
   m_moveSpeed: 0
   m_HP: 0
-  rb: {fileID: 0}
   jumpForce: 0
+  isJumping: 0
+  isGrounded: 0
   groundCheckLeft: {fileID: 0}
   groundCheckRight: {fileID: 0}
 --- !u!1 &4776999080268078371

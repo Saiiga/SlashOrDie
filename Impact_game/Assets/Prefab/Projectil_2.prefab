@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3782384828025891023
+--- !u!1001 &7665146873813439960
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13,11 +13,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7419382987439239, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
       propertyPath: m_difficulty
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7419382987439239, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: projectilType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023911881027294491, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 35.079998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023911881027294491, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 24.802656
       objectReference: {fileID: 0}
     - target: {fileID: 2634788058909951102, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
       propertyPath: m_Name
-      value: Projectil_3
+      value: Projectil_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919064612342513897, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.40943396
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919064612342513897, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7546762
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919064612342513897, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919064612342513897, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7224496833480684062, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
       propertyPath: m_RootOrder
@@ -25,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224496833480684062, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.5127277
       objectReference: {fileID: 0}
     - target: {fileID: 7224496833480684062, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.5162916
       objectReference: {fileID: 0}
     - target: {fileID: 7224496833480684062, guid: 6a133cd4960b7c149a42ae5ef0baf2b6, type: 3}
       propertyPath: m_LocalPosition.z
