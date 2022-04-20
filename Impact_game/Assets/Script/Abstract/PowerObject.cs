@@ -2,48 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bonus : Entity
+public abstract class PowerObject : Entity
 {
-    [SerializeField] float bonusTime;
-    [SerializeField] float bonusSightEffect;
-    public void Action(Player player)
-    {
+    protected bool isActivated;
+    [SerializeField] protected float bonusTime;
 
-    }
+    protected abstract void Action(Player player);
 
     public override void OnDie()
     {
-
-    }
-
-    public override void OnHit()
-    {
-
+        Destroy(this);
     }
 
     public void SightDown()
     {
-        StartCoroutine(BonusSightDownCoroutine(1 - bonusSightEffect));
-    }
-    public void SightUp()
-    {
-        StartCoroutine(BonusSightUpCoroutine(1 + bonusSightEffect));
-
-    }
-
-    IEnumerator BonusSightUpCoroutine(float zoomFactor)
-    {
-        Camera camera = Camera.current;
-        camera.orthographicSize = camera.orthographicSize * zoomFactor;
-        yield return new WaitForSeconds(bonusTime);
-        camera.orthographicSize = camera.orthographicSize / zoomFactor;
     }
 
     IEnumerator BonusSightDownCoroutine(float zoomFactor)
     {
         Camera camera = Camera.main;
+        Debug.Log("size : " + camera.orthographicSize);
         camera.orthographicSize = camera.orthographicSize * zoomFactor;
-        camera.transform.position = new Vector3(camera.transform.position.x, -1, camera.transform.position.z);
+        Debug.Log("size 2 : " + camera.orthographicSize);
+
+        camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y * 0.9f, camera.transform.position.z);
         yield return new WaitForSeconds(bonusTime);
         /*camera.orthographicSize = camera.orthographicSize / zoomFactor;
          *         Debug.Log("size 3: " + camera.orthographicSize);
