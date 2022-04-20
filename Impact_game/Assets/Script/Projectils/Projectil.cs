@@ -8,7 +8,7 @@ public class Projectil : Entity
     [SerializeField] private int m_difficulty;
     [SerializeField] private TextMesh textMeshToShow;
     [SerializeField] private int currentIndex = 0;
-    [SerializeField] private float speed = 100;
+    [SerializeField] private float speed;
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField] public List<ButtonControl> inputsToDo;
@@ -21,11 +21,14 @@ public class Projectil : Entity
 
         ButtonControl[] availableInput = GameController.GetAuthorizedCodes();
         //Depend of projectil's difficulty, allow to use all possible input or not
-        int maxDifferentInputType = (int)(m_difficulty > 4 ? availableInput.Length - 1 : System.Math.Ceiling(availableInput.Length / 2d));
+        int maxDifferentInputType = (int)(m_difficulty < 4 ? availableInput.Length - 1 : System.Math.Floor(availableInput.Length / 2d));
 
         for(int i=0; i<m_difficulty; i++)
         {
-            inputsToDo.Add(availableInput[Random.Range(0, maxDifferentInputType)]);
+            ButtonControl newKey = availableInput[Random.Range(0, maxDifferentInputType)]; 
+            while(i > 0 && newKey == inputsToDo[i-1])
+                newKey = availableInput[Random.Range(0, maxDifferentInputType)]; 
+            inputsToDo.Add(newKey);
         }
         ChangeInputToShow();
     }
@@ -92,9 +95,6 @@ public class Projectil : Entity
 
     private void Move()
     {
-        float horizontalMovement = - speed * Time.deltaTime;
-
-        Vector2 targetVelocity = new Vector2(horizontalMovement, rigibody.velocity.y);
-        rigibody.velocity = Vector3.SmoothDamp(rigibody.velocity, targetVelocity, ref velocity, .05f);
+        rigibody.velocity = new Vector3(-speed, 0, 0);
     }
 }

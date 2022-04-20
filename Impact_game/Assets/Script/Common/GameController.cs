@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public static class GameController
 {
     //Point of where the projectils should be allow to being destroy
-    [SerializeField] public static Vector2 pointAttackAvailable = new Vector2(0,0);
+    [SerializeField] public static Vector2 pointAttackAvailable = new Vector2(6,0);
     private static DualShockGamepad gamepad;
     private static Keyboard keyboard;
     private static ButtonControl[] authorisedKeybordCodes;
