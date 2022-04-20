@@ -66,14 +66,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2634788058909951102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98414d458e12f4648afe6d3f8e57f393, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d8c57a697bea244084c538c8d8986ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 2023911881027294491}
   rigibody: {fileID: -7564369731257748724}
   sprite: {fileID: 3919064612342513897}
   animator: {fileID: 4212165934786230503}
-  m_difficulty: 3
+  m_difficulty: 0
   textMeshToShow: {fileID: 4962386193823911173}
   currentIndex: 0
   speed: 100
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cf0d73df14addc447bf6e17a0757cd73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4dd350855cd1c6b419cef0e2f7874b4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

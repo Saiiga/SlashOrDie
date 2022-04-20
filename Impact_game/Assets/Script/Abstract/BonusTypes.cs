@@ -2,7 +2,7 @@ enum BonusType
 {
     SightDown,
     SightUp,
-    Shild,
+    Shield,
     Bonus04,
     Bonus05
 }
