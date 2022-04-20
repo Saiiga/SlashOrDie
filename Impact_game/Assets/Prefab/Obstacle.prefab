@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497116702275900211, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 497116702275900211, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 497116702275900211, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -74,7 +74,7 @@ PrefabInstance:
     - target: {fileID: 6109093407234695620, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cfd0921d904244840b5827d931a53149, type: 3}
+      objectReference: {fileID: 21300000, guid: a676e410308b496409caf8c188d50e7d, type: 3}
     - target: {fileID: 6109093407234695620, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -113,19 +113,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_Size.x
-      value: 14.3772
+      value: 5.4309006
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_Size.y
-      value: 6.500554
+      value: 3.9161057
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_Offset.x
-      value: -0.71108866
+      value: 0.0275774
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_Offset.y
-      value: 2.070722
+      value: -0.07798958
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
@@ -157,11 +157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 24.802656
+      value: 5.78
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 35.079998
+      value: 4.24
       objectReference: {fileID: 0}
     - target: {fileID: 9129620768740504630, guid: bed30a026fd15c24d9a5abd41b607de6, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTiling
