@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3755585434879159607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86, y: 8.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 3358867439261328783}
   m_RootOrder: 0
@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 7948620742474863599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_LocalScale: {x: 0.11, y: 0.11, z: 1}
   m_Children:
   - {fileID: 8613547734684362062}
   m_Father: {fileID: 0}
@@ -168,10 +168,10 @@ MonoBehaviour:
   rigibody: {fileID: 6762854656678487197}
   sprite: {fileID: 8988297774528862072}
   animator: {fileID: 8118608238555950966}
-  m_difficulty: 0
+  m_difficulty: 3
   textMeshToShow: {fileID: 1009481724120111764}
   currentIndex: 0
-  speed: 200
+  speed: 2.5
   projectilType: 0
 --- !u!61 &6253785288273019530
 BoxCollider2D:

@@ -8,7 +8,7 @@ public class Projectil : Entity
     [SerializeField] private int m_difficulty;
     [SerializeField] private TextMesh textMeshToShow;
     [SerializeField] private int currentIndex = 0;
-    [SerializeField] private float speed = 100;
+    [SerializeField] private float speed;
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField] public List<ButtonControl> inputsToDo;
@@ -95,9 +95,6 @@ public class Projectil : Entity
 
     private void Move()
     {
-        float horizontalMovement = - speed * Time.deltaTime;
-
-        Vector2 targetVelocity = new Vector2(horizontalMovement, rigibody.velocity.y);
-        rigibody.velocity = Vector3.SmoothDamp(rigibody.velocity, targetVelocity, ref velocity, .05f, 1.0f);
+        rigibody.velocity = new Vector3(-speed, 0, 0);
     }
 }
