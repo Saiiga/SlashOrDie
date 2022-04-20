@@ -56,11 +56,16 @@ public class Bonus : Entity
 
     IEnumerator BonusSightDownCoroutine(float zoomFactor)
     {
-        Camera camera = Camera.current;
+        Camera camera = Camera.main;
+        Debug.Log("size : " + camera.orthographicSize);
         camera.orthographicSize = camera.orthographicSize * zoomFactor;
-        camera.transform.position = new Vector2(camera.transform.position.x, camera.transform.position.y * 0.9f);
+        Debug.Log("size 2 : " + camera.orthographicSize);
+
+        camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y * 0.9f, camera.transform.position.z);
         yield return new WaitForSeconds(bonusTime);
         /*camera.orthographicSize = camera.orthographicSize / zoomFactor;
+         *         Debug.Log("size 3: " + camera.orthographicSize);
+
         camera.transform.position = new Vector2(camera.transform.position.x, camera.transform.position.y / 0.9f);
 */
     }
