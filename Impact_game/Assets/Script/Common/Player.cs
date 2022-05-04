@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Entity
 {
@@ -12,6 +13,7 @@ public class Player : Entity
     [SerializeField] private bool isGrounded;
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
+    [SerializeField] Image[] LifeContainers;
 
 
     public void Update()
@@ -51,10 +53,21 @@ public class Player : Entity
 
     public void RemoveHP(int HP)
     {
+       // LifeContainers[m_HP].sprite = Resources.Load<Sprite>("\Impact_game\Assets\Sprite")
         m_HP -= HP;
+        
+       // for(int i = LifeContainers.Length - 1; i >= 0 ; i--)
+       // {
+           // if (LifeContainers[i].active)
+       // }
         if (HP < 1)  
         {
             OnDie();
         }
+    }
+    public void Start()
+    {
+        LifeContainers = GameObject.Find("LifeContainer").GetComponents<Image>();
+
     }
 } 
