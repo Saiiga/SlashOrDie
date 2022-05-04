@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class PowerObject : Entity
 {
     [SerializeField] protected float bonusTime;
+    [SerializeField] protected float speed = 2.5f;
 
     protected abstract void Action(Player player);
 
@@ -16,15 +17,12 @@ public abstract class PowerObject : Entity
     public void SightDown()
     {
     }
-    public void Shield(Player player)
+
+    public void Update()
     {
-        int HP = player.m_HP;
-        player.AddHP(1);
 
-        //timer
-
-        if (player.m_HP == HP +1);
-             player.RemoveHP(1);
+            rigibody.velocity = new Vector3(-speed, 0, 0);
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collider)

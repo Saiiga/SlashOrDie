@@ -20,12 +20,6 @@ public class Range : PowerObject
         marker = GameObject.Find("AttackIndicator");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     IEnumerator RangeCoroutine()
     {
         marker.transform.position += new Vector3(offset, 0) ;
