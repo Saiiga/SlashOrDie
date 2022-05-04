@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SceneChanger : MonoBehaviour
+public class Scene_Changer : MonoBehaviour
 {
     public void Scene1()
     {
@@ -15,5 +15,9 @@ public class SceneChanger : MonoBehaviour
     public void Scene3()
     {
         SceneManager.LoadScene("LVL_3");
+    }
+    public void LVL_select()
+    {
+        SceneManager.LoadScene("LVL_select");
     }
 }
