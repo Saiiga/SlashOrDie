@@ -29,7 +29,7 @@ public class SightUp : PowerObject
         yield return new WaitForSeconds(bonusTime);
         //camera.orthographicSize = camera.orthographicSize / zoomFactor;
         Camera.main.orthographicSize = initialZoom;
-
+        Destroy(this.gameObject);
     }
 
 }

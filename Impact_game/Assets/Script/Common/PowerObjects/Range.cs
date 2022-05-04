@@ -33,5 +33,6 @@ public class Range : PowerObject
         yield return new WaitForSeconds(bonusTime);
         marker.transform.position -= new Vector3(offset, 0);
         GameController.pointAttackAvailable = marker.transform.position.x;
+        Destroy(this.gameObject);
     }
 }

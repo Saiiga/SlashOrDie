@@ -34,6 +34,7 @@ public abstract class PowerObject : Entity
         if (player != null)
         {
             Action(player);
+            sprite.enabled = false;
         }
     }
 

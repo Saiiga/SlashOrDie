@@ -29,7 +29,7 @@ public class SightDown : PowerObject
         yield return new WaitForSeconds(bonusTime);
         Camera.main.orthographicSize = initialZoom;
         Camera.main.transform.position = new Vector3(0, -.2f, Camera.main.transform.position.z);
-
+        Destroy(this.gameObject);
     }
 
 }
