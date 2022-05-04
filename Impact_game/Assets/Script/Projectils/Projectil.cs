@@ -14,10 +14,12 @@ public class Projectil : Entity
     [SerializeField] public List<ButtonControl> inputsToDo;
     [SerializeField] public ProjectilType projectilType;
 
+    private Player player;
     private GameObject attackIndicator;
 
     public void Start()
     {
+        player = FindObjectOfType<Player>();
         attackIndicator = GameObject.Find("AttackIndicator");
         inputsToDo = new List<ButtonControl>();
 
@@ -79,6 +81,7 @@ public class Projectil : Entity
             currentIndex++;
             if (currentIndex == inputsToDo.Count)
             {
+                player.animator.Play("Slash");
                 OnDie();
                 return;
             }
