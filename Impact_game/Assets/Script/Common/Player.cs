@@ -12,7 +12,9 @@ public class Player : Entity
     [SerializeField] private bool isGrounded;
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
+    [SerializeField] private SpriteRenderer shieldRenderer;
 
+    public SpriteRenderer ShieldRenderer { get => shieldRenderer; set => shieldRenderer = value; }
 
     public void Update()
     {
@@ -31,13 +33,21 @@ public class Player : Entity
     public override void OnDie()
     {
         animator.Play("Death");
-
+        Debug.Log("ded");
     }
 
     public override void OnHit()
     {
+        if(ShieldRenderer.enabled)
+        {
+            ShieldRenderer.enabled = false;
+            Debug.Log("protected");
+            return;
+        }
         animator.Play("Hit");
         RemoveHP(1);
+        Debug.Log("hit, new hp :"+ m_HP);
+        
     }
     
     public void TryToRecognizeAttack()

@@ -14,9 +14,11 @@ public class Projectil : Entity
     [SerializeField] public List<ButtonControl> inputsToDo;
     [SerializeField] public ProjectilType projectilType;
 
+    private GameObject attackIndicator;
 
     public void Start()
     {
+        attackIndicator = GameObject.Find("AttackIndicator");
         inputsToDo = new List<ButtonControl>();
 
         ButtonControl[] availableInput = GameController.GetAuthorizedCodes();
@@ -42,9 +44,9 @@ public class Projectil : Entity
         }
     }
 
-    public bool IsDrestroyable()
+    private bool IsDrestroyable()
     {
-        return transform.position.x <= GameController.pointAttackAvailable.x;
+        return transform.position.x <= attackIndicator.transform.position.x;
       
     }
 
