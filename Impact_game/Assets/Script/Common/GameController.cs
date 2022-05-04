@@ -6,9 +6,8 @@ using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem;
 
 public static class GameController
-{
-    //Point of where the projectils should be allow to being destroy
-    [SerializeField] public static Vector2 pointAttackAvailable = new Vector2(6,0);
+{   //Point of where the projectils should be allow to being destroy
+    [SerializeField] public static float pointAttackAvailable = 3;
     private static DualShockGamepad gamepad;
     private static Keyboard keyboard;
     private static ButtonControl[] authorisedKeybordCodes;
